@@ -1,7 +1,8 @@
 var slideInterval = 3500;
-function getFigures (){
+function getFigures () {
     return
     document.getElementById('carousel').getElementsByTagName('figure');
+    
 }
 function moveForward(){
     var pointer;
@@ -21,5 +22,5 @@ function moveForward(){
 }
 function startPlayback(){
     setTimeout(moveForward, slideInterval);
+    startPlayback();
 }
-startPlayback();
